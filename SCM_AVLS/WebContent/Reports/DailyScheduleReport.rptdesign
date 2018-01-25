@@ -1,0 +1,1760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.2.v201410272105 Build &lt;4.4.2.v20150217-1805></property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">6339</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">6339</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">6339</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="companyname" id="3241">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="companyUrl" id="3242">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ToDate" id="912">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="FromDate" id="913">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ServiceId" id="3384">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="User" id="6331">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="OperatorID" id="6338">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="DepartmentId" id="12105">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="910">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+            <property name="odaURL">jdbc:sqlserver://192.168.206.7;databaseName=SMC</property>
+            <property name="odaUser">sa</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">YXJzc2VAMTIz</encrypted-property>
+        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source2" id="3580">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+            <property name="odaURL">jdbc:sqlserver://192.168.206.16;databaseName=SMC_VTS</property>
+            <property name="odaUser">sa</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">c2FAMTIz</encrypted-property>
+        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source1" id="6332">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+            <property name="odaURL">jdbc:sqlserver://192.168.206.18;databaseName=SMC_VTS</property>
+            <property name="odaUser">sa</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">c2FAMTIz</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.SPSelectDataSet" name="ScheduleData Set" id="3246">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints"/>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">@p_fromdate</property>
+                    <property name="paramName">FromDate</property>
+                    <property name="nativeName">@p_fromdate</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_todate</property>
+                    <property name="paramName">ToDate</property>
+                    <property name="nativeName">@p_todate</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_RouteID</property>
+                    <property name="paramName">ServiceId</property>
+                    <property name="nativeName">@p_RouteID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">3</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_userId</property>
+                    <property name="paramName">User</property>
+                    <property name="nativeName">@p_userId</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">4</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_OperatorId</property>
+                    <property name="paramName">OperatorID</property>
+                    <property name="nativeName">@p_OperatorId</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">5</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">serviceno</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">StartLocation</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">EndLocation</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ScheduleTime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">ActualVehicle</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">VirtualVehicle</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">TripStatus</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">StartTime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">EndTime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">PlannedStartTime</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">TripId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">OperatorId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">OperatorName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source2</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Date</property>
+                    <property name="nativeName">Date</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">serviceno</property>
+                    <property name="nativeName">serviceno</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">StartLocation</property>
+                    <property name="nativeName">StartLocation</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">EndLocation</property>
+                    <property name="nativeName">EndLocation</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ScheduleTime</property>
+                    <property name="nativeName">ScheduleTime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">ActualVehicle</property>
+                    <property name="nativeName">ActualVehicle</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">VirtualVehicle</property>
+                    <property name="nativeName">VirtualVehicle</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">TripStatus</property>
+                    <property name="nativeName">TripStatus</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">StartTime</property>
+                    <property name="nativeName">StartTime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">EndTime</property>
+                    <property name="nativeName">EndTime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">PlannedStartTime</property>
+                    <property name="nativeName">PlannedStartTime</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">TripId</property>
+                    <property name="nativeName">TripId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">OperatorId</property>
+                    <property name="nativeName">OperatorId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">OperatorName</property>
+                    <property name="nativeName">OperatorName</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{call SPC_getDailyScheduleReport(?,?,?,?,?)} ]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_fromdate</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_todate</design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_RouteID</design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_userId</design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_OperatorId</design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.SPSelectDataSet" name="Data Set" id="6339">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints"/>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">@p_fromdate</property>
+                    <property name="paramName">FromDate</property>
+                    <property name="nativeName">@p_fromdate</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_todate</property>
+                    <property name="paramName">ToDate</property>
+                    <property name="nativeName">@p_todate</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_RouteID</property>
+                    <property name="paramName">ServiceId</property>
+                    <property name="nativeName">@p_RouteID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">3</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_userId</property>
+                    <property name="paramName">User</property>
+                    <property name="nativeName">@p_userId</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">4</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_OperatorId</property>
+                    <property name="paramName">OperatorID</property>
+                    <property name="nativeName">@p_OperatorId</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">5</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_DepartmentId</property>
+                    <property name="paramName">DepartmentId</property>
+                    <property name="nativeName">@p_DepartmentId</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">6</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">serviceno</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">StartLocation</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">EndLocation</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ScheduleTime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">ActualVehicle</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">VirtualVehicle</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">TripStatus</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">StartTime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">EndTime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">PlannedStartTime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">TripId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">OperatorId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">OperatorName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source2</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Date</property>
+                    <property name="nativeName">Date</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">serviceno</property>
+                    <property name="nativeName">serviceno</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">StartLocation</property>
+                    <property name="nativeName">StartLocation</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">EndLocation</property>
+                    <property name="nativeName">EndLocation</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ScheduleTime</property>
+                    <property name="nativeName">ScheduleTime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">ActualVehicle</property>
+                    <property name="nativeName">ActualVehicle</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">VirtualVehicle</property>
+                    <property name="nativeName">VirtualVehicle</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">TripStatus</property>
+                    <property name="nativeName">TripStatus</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">StartTime</property>
+                    <property name="nativeName">StartTime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">EndTime</property>
+                    <property name="nativeName">EndTime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">PlannedStartTime</property>
+                    <property name="nativeName">PlannedStartTime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">TripId</property>
+                    <property name="nativeName">TripId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">OperatorId</property>
+                    <property name="nativeName">OperatorId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">OperatorName</property>
+                    <property name="nativeName">OperatorName</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{call SPC_getDailyScheduleReport(?,?,?,?,?,?)} ]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_fromdate</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_todate</design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_RouteID</design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_userId</design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_OperatorId</design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_DepartmentId</design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">"Arial"</property>
+            <property name="fontSize">small</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderLeftWidth">0pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">none</property>
+            <property name="borderTopWidth">0pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+            <structure name="numberFormat">
+                <property name="category">General Number</property>
+                <property name="pattern">General Number</property>
+            </structure>
+            <property name="orphans">inherit</property>
+            <property name="widows">inherit</property>
+            <property name="pageBreakAfter">avoid</property>
+            <property name="pageBreakBefore">avoid</property>
+        </style>
+        <style name="report-text-right" id="148">
+            <property name="textAlign">right</property>
+        </style>
+        <style name="report-text-center" id="149">
+            <property name="textAlign">center</property>
+        </style>
+        <style name="report-text-left" id="150">
+            <property name="textAlign">left</property>
+        </style>
+        <style name="reportview" id="151">
+            <property name="borderBottomColor">#DADFE5</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">#DADFE5</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">#DADFE5</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">#DADFE5</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="whiteSpace">normal</property>
+        </style>
+        <style name="reportviewheader" id="152">
+            <property name="backgroundColor">#DADFE5</property>
+            <property name="backgroundRepeat">repeat-x</property>
+            <property name="fontFamily">"arial"</property>
+            <property name="fontSize">11px</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#475057</property>
+            <property name="borderBottomColor">#DADFE5</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">#DADFE5</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">#DADFE5</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">#DADFE5</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">4px</property>
+            <property name="paddingLeft">4px</property>
+            <property name="paddingBottom">4px</property>
+            <property name="paddingRight">4px</property>
+            <property name="textAlign">left</property>
+        </style>
+        <style name="reportviewdetails" id="153">
+            <property name="fontSize">11px</property>
+            <property name="color">#333333</property>
+            <property name="borderBottomColor">#DADFE5</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">#DADFE5</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">#DADFE5</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">#DADFE5</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">4px</property>
+            <property name="paddingLeft">4px</property>
+            <property name="paddingBottom">4px</property>
+            <property name="paddingRight">4px</property>
+        </style>
+        <style name="cross-rowheader" id="1317">
+            <property name="backgroundColor">#E1E7EB</property>
+            <property name="fontSize">15px</property>
+            <property name="color">#000000</property>
+            <property name="borderBottomWidth">2px</property>
+            <property name="borderLeftWidth">2px</property>
+            <property name="borderRightWidth">2px</property>
+            <property name="borderTopWidth">2px</property>
+        </style>
+        <style name="cross-prev-data" id="1319">
+            <property name="backgroundColor">#C8C8C8</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="crosstab-summary" id="1341">
+            <property name="backgroundColor">#DADFE5</property>
+            <property name="backgroundRepeat">repeat-x</property>
+            <property name="fontFamily">"arial"</property>
+            <property name="fontSize">11px</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#475057</property>
+            <property name="borderBottomColor">#DADFE5</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">#DADFE5</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">#DADFE5</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">#DADFE5</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">4px</property>
+            <property name="paddingLeft">4px</property>
+            <property name="paddingBottom">4px</property>
+            <property name="paddingRight">4px</property>
+            <property name="textAlign">left</property>
+        </style>
+        <style name="report-mainheader" id="1432">
+            <property name="color">#2E2E2E</property>
+            <property name="borderBottomColor">#909090</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">#909090</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">#909090</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">#909090</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">4px</property>
+            <property name="paddingLeft">4px</property>
+            <property name="paddingBottom">4px</property>
+            <property name="paddingRight">4px</property>
+        </style>
+        <style name="report-table" id="1433">
+            <property name="fontSize">11px</property>
+            <property name="color">#2E2E2E</property>
+            <property name="borderBottomColor">#909090</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">#909090</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">#909090</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">#909090</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="paddingTop">4px</property>
+            <property name="paddingLeft">4px</property>
+            <property name="paddingBottom">4px</property>
+            <property name="paddingRight">4px</property>
+        </style>
+        <style name="vms-footer" id="1434">
+            <property name="fontSize">10px</property>
+            <property name="fontWeight">normal</property>
+            <property name="color">#989999</property>
+            <property name="paddingTop">7px</property>
+            <property name="paddingLeft">7px</property>
+            <property name="paddingBottom">7px</property>
+            <property name="paddingRight">7px</property>
+            <property name="textAlign">center</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="orientation">portrait</property>
+            <property name="showHeaderOnFirst">false</property>
+            <page-footer>
+                <grid id="738">
+                    <property name="height">0.3229166666666667in</property>
+                    <property name="width">7.791666666666667in</property>
+                    <column id="739">
+                        <property name="width">0.8645833333333334in</property>
+                    </column>
+                    <column id="740">
+                        <property name="width">3.2395833333333335in</property>
+                    </column>
+                    <column id="741">
+                        <property name="width">3.6875in</property>
+                    </column>
+                    <row id="742">
+                        <property name="height">0.3229166666666667in</property>
+                        <cell id="743">
+                            <image id="1174">
+                                <property name="height">0.20833333333333334in</property>
+                                <property name="width">0.6354166666666666in</property>
+                                <property name="source">file</property>
+                                <expression name="uri" type="constant">Images\arslogo.jpg</expression>
+                            </image>
+                        </cell>
+                        <cell id="744">
+                            <text id="752">
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[Generated Time:<value-of>
+importPackage( Packages.java.text );
+var format= new SimpleDateFormat("dd/MM/yyyy hh:mm:ss a", reportContext.getLocale());
+var outDate = format.format(new Date());
+outDate</value-of>]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="745">
+                            <grid id="837">
+                                <property name="width">3.625in</property>
+                                <column id="838">
+                                    <property name="width">1.6458333333333333in</property>
+                                </column>
+                                <column id="839">
+                                    <property name="width">1.9791666666666667in</property>
+                                </column>
+                                <row id="840">
+                                    <cell id="841"/>
+                                    <cell id="842">
+                                        <grid id="783">
+                                            <property name="height">0.3333333333333333in</property>
+                                            <property name="width">2.2916666666666665in</property>
+                                            <column id="796">
+                                                <property name="width">0.65625in</property>
+                                            </column>
+                                            <column id="784">
+                                                <property name="width">0.5520833333333334in</property>
+                                            </column>
+                                            <column id="785">
+                                                <property name="width">0.22916666666666666in</property>
+                                            </column>
+                                            <column id="786">
+                                                <property name="width">0.8541666666666666in</property>
+                                            </column>
+                                            <row id="787">
+                                                <property name="height">0.3333333333333333in</property>
+                                                <cell id="795">
+                                                    <label id="797">
+                                                        <property name="textAlign">right</property>
+                                                        <text-property name="text">Page </text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="788">
+                                                    <auto-text id="789">
+                                                        <property name="textAlign">right</property>
+                                                        <property name="type">page-number</property>
+                                                    </auto-text>
+                                                </cell>
+                                                <cell id="790">
+                                                    <text id="791">
+                                                        <property name="textAlign">center</property>
+                                                        <property name="contentType">plain</property>
+                                                        <text-property name="content"><![CDATA[/]]></text-property>
+                                                    </text>
+                                                </cell>
+                                                <cell id="792">
+                                                    <auto-text id="793">
+                                                        <property name="textAlign">left</property>
+                                                        <property name="type">total-page</property>
+                                                    </auto-text>
+                                                </cell>
+                                            </row>
+                                        </grid>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="472">
+            <property name="fontFamily">"Arial"</property>
+            <property name="borderBottomColor">#000000</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">thin</property>
+            <property name="borderLeftColor">#000000</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">thin</property>
+            <property name="borderRightColor">#000000</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">thin</property>
+            <property name="borderTopColor">#000000</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">thin</property>
+            <property name="height">1.4583333333333333in</property>
+            <property name="width">7.739583333333333in</property>
+            <column id="473">
+                <property name="width">1.0729166666666667in</property>
+            </column>
+            <column id="474">
+                <property name="width">3.2083333333333335in</property>
+            </column>
+            <column id="712">
+                <property name="width">1.5625in</property>
+            </column>
+            <column id="6335">
+                <property name="width">1.8958333333333333in</property>
+            </column>
+            <row id="713">
+                <property name="height">0.3020833333333333in</property>
+                <cell id="714">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <text-data id="3244">
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <expression name="valueExpr">params["companyname"].value</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+                <cell id="710">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text-data id="3245">
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">right</property>
+                        <expression name="valueExpr">params["companyUrl"].value</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="719">
+                <property name="height">1.15625in</property>
+                <cell id="735">
+                    <property name="textAlign">center</property>
+                    <image id="3243">
+                        <property name="height">1.0526315789473684in</property>
+                        <property name="width">0.968421052631579in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">Images/SMC Logo_small.png</expression>
+                    </image>
+                </cell>
+                <cell id="720">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text-data id="794">
+                        <property name="fontSize">20px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">"Daily Schedule"</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                    <label id="3551"/>
+                    <label id="6201">
+                        <property name="fontSize">5px</property>
+                    </label>
+                    <text-data id="753">
+                        <property name="fontSize">14px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">var givenDate = params["FromDate"].value;&#13;
+var givenDate1 = params["ToDate"].value;&#13;
+importPackage( Packages.java.text );&#13;
+var format= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", reportContext.getLocale());&#13;
+var formattedDate = format.parse( givenDate );&#13;
+var formattedDate1 = format.parse( givenDate1);&#13;
+var format1= new SimpleDateFormat("dd/MM/yyyy", reportContext.getLocale());&#13;
+var fromDate = format1.format( formattedDate );&#13;
+var toDate = format1.format( formattedDate1 );&#13;
+&#13;
+'Reporting Period : ' +fromDate  + '  To  '+ toDate</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+                <cell id="6334">
+                    <label id="6336"/>
+                    <image id="6337">
+                        <property name="height">0.385in</property>
+                        <property name="width">1.75in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">Images/sitilink.png</expression>
+                    </image>
+                </cell>
+            </row>
+        </grid>
+        <label id="798"/>
+        <table id="3388">
+            <property name="style">report-table</property>
+            <property name="width">7.729166666666667in</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Date</property>
+                    <text-property name="displayName">Date</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Date"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">serviceno</property>
+                    <text-property name="displayName">serviceno</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["serviceno"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">StartLocation</property>
+                    <text-property name="displayName">StartLocation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["StartLocation"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">EndLocation</property>
+                    <text-property name="displayName">EndLocation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EndLocation"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ScheduleTime</property>
+                    <text-property name="displayName">ScheduleTime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ScheduleTime"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ActualVehicle</property>
+                    <text-property name="displayName">ActualVehicle</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ActualVehicle"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">VirtualVehicle</property>
+                    <text-property name="displayName">VirtualVehicle</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["VirtualVehicle"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TripStatus</property>
+                    <text-property name="displayName">TripStatus</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TripStatus"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">StartTime</property>
+                    <text-property name="displayName">StartTime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["StartTime"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">EndTime</property>
+                    <text-property name="displayName">EndTime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EndTime"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PlannedStartTime</property>
+                    <text-property name="displayName">PlannedStartTime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PlannedStartTime"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TripId</property>
+                    <text-property name="displayName">TripId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TripId"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">OperatorId</property>
+                    <text-property name="displayName">OperatorId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["OperatorId"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">OperatorName</property>
+                    <text-property name="displayName">OperatorName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["OperatorName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="repeatHeader">true</property>
+            <property name="pageBreakInterval">100</property>
+            <column id="3432">
+                <property name="width">2.4375in</property>
+            </column>
+            <column id="3575">
+                <property name="width">1.0833333333333333in</property>
+            </column>
+            <column id="3563">
+                <property name="width">0.8125in</property>
+            </column>
+            <column id="3436">
+                <property name="width">0.9270833333333334in</property>
+            </column>
+            <column id="3437">
+                <property name="width">0.9479166666666666in</property>
+            </column>
+            <column id="3438">
+                <property name="width">0.8020833333333334in</property>
+            </column>
+            <column id="3439">
+                <property name="width">0.6979166666666666in</property>
+            </column>
+            <header>
+                <row id="3389">
+                    <property name="height">0.40625in</property>
+                    <cell id="3390">
+                        <property name="style">report-table</property>
+                        <label id="3391">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Date</text-property>
+                        </label>
+                    </cell>
+                    <cell id="3564">
+                        <property name="style">report-table</property>
+                        <label id="3576">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Virtual Vehicle</text-property>
+                        </label>
+                    </cell>
+                    <cell id="3552">
+                        <property name="style">report-table</property>
+                        <label id="3577">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Actual Vehicle</text-property>
+                        </label>
+                    </cell>
+                    <cell id="3398">
+                        <property name="style">report-table</property>
+                        <label id="3399">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Schedule Time</text-property>
+                        </label>
+                    </cell>
+                    <cell id="3400">
+                        <property name="style">report-table</property>
+                        <label id="3401">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Trip Status</text-property>
+                        </label>
+                    </cell>
+                    <cell id="3402">
+                        <property name="style">report-table</property>
+                        <label id="3403">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Start Time</text-property>
+                        </label>
+                    </cell>
+                    <cell id="3404">
+                        <property name="style">report-table</property>
+                        <label id="3405">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">End Time</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <group id="3440">
+                <property name="groupName">groupdate</property>
+                <expression name="keyExpr" type="javascript">row["Date"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["Date"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="3441">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="overflow">auto</property>
+                        <property name="height">0.23958333333333334in</property>
+                        <cell id="3442">
+                            <property name="colSpan">7</property>
+                            <property name="rowSpan">1</property>
+                            <property name="style">report-table</property>
+                            <data id="3537">
+                                <structure name="dateTimeFormat">
+                                    <property name="category">Custom</property>
+                                    <property name="pattern">dd/MM/y</property>
+                                </structure>
+                                <property name="dataSet">Data Set</property>
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">Date</property>
+                                        <text-property name="displayName">Date</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["Date"]</expression>
+                                        <property name="dataType">string</property>
+                                        <property name="allowExport">true</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">serviceno</property>
+                                        <text-property name="displayName">serviceno</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["serviceno"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">StartLocation</property>
+                                        <text-property name="displayName">StartLocation</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["StartLocation"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">EndLocation</property>
+                                        <text-property name="displayName">EndLocation</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["EndLocation"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">ScheduleTime</property>
+                                        <text-property name="displayName">ScheduleTime</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["ScheduleTime"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">ActualVehicle</property>
+                                        <text-property name="displayName">ActualVehicle</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["ActualVehicle"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">VirtualVehicle</property>
+                                        <text-property name="displayName">VirtualVehicle</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["VirtualVehicle"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">TripStatus</property>
+                                        <text-property name="displayName">TripStatus</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["TripStatus"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">StartTime</property>
+                                        <text-property name="displayName">StartTime</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["StartTime"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">EndTime</property>
+                                        <text-property name="displayName">EndTime</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["EndTime"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">PlannedStartTime</property>
+                                        <text-property name="displayName">PlannedStartTime</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["PlannedStartTime"]</expression>
+                                        <property name="dataType">date-time</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">TripId</property>
+                                        <text-property name="displayName">TripId</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["TripId"]</expression>
+                                        <property name="dataType">integer</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">OperatorId</property>
+                                        <text-property name="displayName">OperatorId</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["OperatorId"]</expression>
+                                        <property name="dataType">integer</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">OperatorName</property>
+                                        <text-property name="displayName">OperatorName</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["OperatorName"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">Date</property>
+                            </data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="3450">
+                        <property name="height">0.17708333333333334in</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="3451">
+                            <property name="colSpan">7</property>
+                            <property name="rowSpan">1</property>
+                            <property name="style">report-table</property>
+                        </cell>
+                    </row>
+                </footer>
+            </group>
+            <group id="3460">
+                <property name="groupName">GroupServiceno</property>
+                <expression name="keyExpr" type="javascript">row["serviceno"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["serviceno"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="3461">
+                        <property name="height">0.23958333333333334in</property>
+                        <cell id="3462">
+                            <property name="colSpan">7</property>
+                            <property name="rowSpan">1</property>
+                            <property name="style">report-table</property>
+                            <property name="backgroundColor">#C0C0C0</property>
+                            <text-data id="3550">
+                                <property name="textAlign">left</property>
+                                <expression name="valueExpr">'Service No: '+row["serviceno"] +'   ['+row["StartLocation"] +'  to ' +row["EndLocation"]+']'</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="3470">
+                        <property name="height">0.16666666666666666in</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="3471"/>
+                        <cell id="3572"/>
+                        <cell id="3560"/>
+                        <cell id="3475"/>
+                        <cell id="3476"/>
+                        <cell id="3477"/>
+                        <cell id="3478"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="3480">
+                <property name="groupName">GroupStartlocation</property>
+                <expression name="keyExpr" type="javascript">row["StartLocation"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["StartLocation"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+            </group>
+            <group id="3500">
+                <property name="groupName">GroupEndLocation</property>
+                <expression name="keyExpr" type="javascript">row["EndLocation"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["EndLocation"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+            </group>
+            <detail>
+                <row id="3406">
+                    <property name="overflow">auto</property>
+                    <cell id="3407">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">1</property>
+                    </cell>
+                    <cell id="3569">
+                        <property name="style">report-table</property>
+                        <data id="3578">
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">VirtualVehicle</property>
+                        </data>
+                    </cell>
+                    <cell id="3557">
+                        <property name="style">report-table</property>
+                        <data id="3579">
+                            <property name="resultSetColumn">ActualVehicle</property>
+                        </data>
+                    </cell>
+                    <cell id="3415">
+                        <property name="style">report-table</property>
+                        <data id="3416">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">ScheduleTime</property>
+                        </data>
+                    </cell>
+                    <cell id="3417">
+                        <property name="style">report-table</property>
+                        <data id="3418">
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">TripStatus</property>
+                        </data>
+                    </cell>
+                    <cell id="3419">
+                        <property name="style">report-table</property>
+                        <data id="3420">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">StartTime</property>
+                        </data>
+                    </cell>
+                    <cell id="3421">
+                        <property name="style">report-table</property>
+                        <data id="3422">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">EndTime</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="3423">
+                    <property name="borderBottomColor">#909090</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftColor">#909090</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightColor">#909090</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopColor">#909090</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <property name="height">0.3125in</property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">Total.Count()>=1</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="3424">
+                        <property name="colSpan">7</property>
+                        <property name="rowSpan">1</property>
+                        <label id="1044">
+                            <property name="fontSize">16px</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <list-property name="visibility">
+                                <structure>
+                                    <property name="format">all</property>
+                                    <expression name="valueExpr" type="javascript">Total.count()>=1</expression>
+                                </structure>
+                            </list-property>
+                            <text-property name="text">No data found for the selected criteria</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

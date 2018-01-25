@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd"> 
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%p - %C{1}.%M(%L) | %m%n" />
+		</layout>
+	</appender>
+	
+
+	<appender name="LOG_FILE"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="Threshold" value="ALL" />
+		<param name="File" value="C:/NMMTeports/Logs/ReportEngine.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="10MB" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss,SSS} [%t] %-5p %c %x - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="org.apache">
+		<level value="ERROR" />
+		<appender-ref ref="LOG_FILE"/>
+	</logger>
+
+	<logger name="com.arsse">
+		<level value="WARN" />
+		<level value="INFO" />
+		<level value="DEBUG" />
+		<appender-ref ref="LOG_FILE"/>
+	</logger>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+</log4j:configuration>

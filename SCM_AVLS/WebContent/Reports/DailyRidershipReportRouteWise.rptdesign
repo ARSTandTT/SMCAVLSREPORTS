@@ -1,0 +1,1396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.2.v201410272105 Build &lt;4.4.2.v20150217-1805></property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">6939</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">6939</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">6939</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="companyname" id="3240">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="companyUrl" id="3241">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="DepotId" id="1207">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">-1</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="summaryBy" id="3246">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="groupBy" id="3247">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="FromDate" id="817">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ToDate" id="818">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="VehicleID" id="1172">
+            <text-property name="promptText">VehicleID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">0</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="FleetTypeID" id="3370">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">0</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ServiceId" id="3384">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="User" id="6331">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="DriverId" id="9782">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="OperatorID" id="3385">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="MachineNo" id="9783">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="6938">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+            <property name="odaURL">jdbc:sqlserver://192.168.206.16;databaseName=SMC_VTS</property>
+            <property name="odaUser">sa</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">c2FAMTIz</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.SPSelectDataSet" name="Data Set" id="6939">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">@p_GroupById</property>
+                    <property name="paramName">groupBy</property>
+                    <property name="nativeName">@p_GroupById</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_SummaryById</property>
+                    <property name="paramName">summaryBy</property>
+                    <property name="nativeName">@p_SummaryById</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_VehicleID</property>
+                    <property name="paramName">VehicleID</property>
+                    <property name="nativeName">@p_VehicleID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">3</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_fromDate</property>
+                    <property name="paramName">FromDate</property>
+                    <property name="nativeName">@p_fromDate</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">4</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_toDate</property>
+                    <property name="paramName">ToDate</property>
+                    <property name="nativeName">@p_toDate</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">5</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_OperatorID</property>
+                    <property name="paramName">OperatorID</property>
+                    <property name="nativeName">@p_OperatorID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">6</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_DriverID</property>
+                    <property name="paramName">DriverId</property>
+                    <property name="nativeName">@p_DriverID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">7</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_ServiceId</property>
+                    <property name="paramName">ServiceId</property>
+                    <property name="nativeName">@p_ServiceId</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">8</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_MachineNo</property>
+                    <property name="paramName">MachineNo</property>
+                    <property name="nativeName">@p_MachineNo</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">9</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_userId</property>
+                    <property name="paramName">User</property>
+                    <property name="nativeName">@p_userId</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">10</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">groupid</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">groupname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">SummaryById</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">SummaryByName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">RouteName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Direction</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">NoOfAdult</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">NoOfChild</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">groupid</property>
+                    <property name="nativeName">groupid</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">groupname</property>
+                    <property name="nativeName">groupname</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">SummaryById</property>
+                    <property name="nativeName">SummaryById</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">SummaryByName</property>
+                    <property name="nativeName">SummaryByName</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">RouteName</property>
+                    <property name="nativeName">RouteName</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Direction</property>
+                    <property name="nativeName">Direction</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">NoOfAdult</property>
+                    <property name="nativeName">NoOfAdult</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">NoOfChild</property>
+                    <property name="nativeName">NoOfChild</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{call spc_GetDailyRidershipReportRouteWise_Daily(?,?,?,?,?,?,?,?,?,?)}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_GroupById</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_SummaryById</design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_VehicleID</design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_fromDate</design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>20</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_toDate</design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>20</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_OperatorID</design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_DriverID</design:name>
+            <design:position>7</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_ServiceId</design:name>
+            <design:position>8</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_MachineNo</design:name>
+            <design:position>9</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_userId</design:name>
+            <design:position>10</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="4832">
+            <property name="color">black</property>
+            <property name="borderBottomColor">#909090</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">thin</property>
+            <property name="borderLeftColor">#909090</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">thin</property>
+            <property name="borderRightColor">#909090</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">thin</property>
+            <property name="borderTopColor">#909090</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">thin</property>
+            <property name="textAlign">left</property>
+            <property name="height">1.4791666666666667in</property>
+            <property name="width">7.989583333333333in</property>
+            <column id="4833">
+                <property name="width">1.1145833333333333in</property>
+            </column>
+            <column id="4834">
+                <property name="width">3.0625in</property>
+            </column>
+            <column id="4835">
+                <property name="width">2.2395833333333335in</property>
+            </column>
+            <column id="6934">
+                <property name="width">1.5729166666666667in</property>
+            </column>
+            <row id="4836">
+                <property name="height">0.3020833333333333in</property>
+                <cell id="4837">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <text-data id="4838">
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <expression name="valueExpr">params["companyname"].value</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+                <cell id="4839">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text-data id="3244">
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">right</property>
+                        <expression name="valueExpr">params["companyUrl"].value</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="4840">
+                <property name="height">1.1770833333333333in</property>
+                <cell id="4841">
+                    <property name="textAlign">center</property>
+                    <image id="3243">
+                        <property name="height">1.0526315789473684in</property>
+                        <property name="width">0.968421052631579in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">Images/SMC Logo_small.png</expression>
+                    </image>
+                </cell>
+                <cell id="4842">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text id="6204">
+                        <property name="fontSize">20px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="textAlign">center</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[DAILY RIDERSHIP REPORT]]></text-property>
+                    </text>
+                    <label id="5804"/>
+                    <label id="6354">
+                        <property name="fontSize">5px</property>
+                    </label>
+                    <text-data id="753">
+                        <property name="fontSize">14px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">var givenDate = params["FromDate"].value;&#13;
+var givenDate1 = params["ToDate"].value;&#13;
+importPackage( Packages.java.text );&#13;
+var format= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", reportContext.getLocale());&#13;
+var formattedDate = format.parse( givenDate );&#13;
+var formattedDate1 = format.parse( givenDate1);&#13;
+var format1= new SimpleDateFormat("dd/MM/yyyy", reportContext.getLocale());&#13;
+var fromDate = format1.format( formattedDate );&#13;
+var toDate = format1.format( formattedDate1 );&#13;
+&#13;
+'Reporting Period : '+fromDate+' To ' +toDate</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                    <label id="6355">
+                        <property name="fontSize">5px</property>
+                    </label>
+                    <text-data id="6289">
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr" type="javascript">var value;&#13;
+&#13;
+  if(params["groupBy"].value==1)&#13;
+ {&#13;
+ value='Route';&#13;
+ }&#13;
+ else if(params["groupBy"].value==2)&#13;
+ {&#13;
+  value='Vehicle Type ';&#13;
+ }&#13;
+  else if(params["groupBy"].value==3)&#13;
+ {&#13;
+  value='Week';&#13;
+ }&#13;
+  else if(params["groupBy"].value==4)&#13;
+ {&#13;
+  value='Date';&#13;
+ }&#13;
+   else if(params["groupBy"].value==5)&#13;
+ {&#13;
+  value='Month';&#13;
+ }&#13;
+    else if(params["groupBy"].value==6)&#13;
+ {&#13;
+  value='Bi-Week';&#13;
+ }&#13;
+ else if(params["groupBy"].value==7)&#13;
+ {&#13;
+  value='Vehicle';&#13;
+ }&#13;
+ else if(params["groupBy"].value==8)&#13;
+ {&#13;
+  value='Trip';&#13;
+ }&#13;
+else if(params["groupBy"].value==8)&#13;
+ {&#13;
+  value='Depot';&#13;
+ }&#13;
+'Group By '+value</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+                <cell id="6933">
+                    <label id="6935"/>
+                    <image id="6936">
+                        <property name="display">block</property>
+                        <property name="height">0.385in</property>
+                        <property name="width">1.542in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">Images/sitilink.png</expression>
+                    </image>
+                    <label id="6937"/>
+                </cell>
+            </row>
+        </grid>
+        <table id="9784">
+            <property name="borderBottomColor">#909090</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">thin</property>
+            <property name="borderLeftColor">#909090</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">thin</property>
+            <property name="borderRightColor">#909090</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">thin</property>
+            <property name="borderTopColor">#909090</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">thin</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="visibility">
+                <structure>
+                    <property name="format">all</property>
+                    <expression name="valueExpr" type="javascript">Total.count()>1</expression>
+                </structure>
+            </list-property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">groupname</property>
+                    <text-property name="displayName">groupname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["groupname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">SummaryById</property>
+                    <text-property name="displayName">SummaryById</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SummaryById"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">SummaryByName</property>
+                    <text-property name="displayName">SummaryByName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SummaryByName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">RouteName</property>
+                    <text-property name="displayName">RouteName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RouteName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Direction</property>
+                    <text-property name="displayName">Direction</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Direction"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NoOfAdult</property>
+                    <text-property name="displayName">NoOfAdult</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NoOfAdult"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NoOfChild</property>
+                    <text-property name="displayName">NoOfChild</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NoOfChild"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation</property>
+                    <property name="dataType">integer</property>
+                    <property name="aggregateFunction">RUNNINGCOUNT</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation_1</property>
+                    <property name="dataType">integer</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>groupid</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["NoOfAdult"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation_2</property>
+                    <property name="dataType">integer</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>groupid</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["NoOfChild"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">groupid</property>
+                    <text-property name="displayName">groupid</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["groupid"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <column id="9833"/>
+            <column id="9837"/>
+            <column id="9826"/>
+            <column id="9827"/>
+            <column id="9828"/>
+            <column id="9829"/>
+            <header>
+                <row id="9785">
+                    <property name="height">0.25in</property>
+                    <cell id="9830">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="9838">
+                            <property name="fontSize">10px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Sr. No.</text-property>
+                        </label>
+                    </cell>
+                    <cell id="9834">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text-data id="9839">
+                            <property name="fontSize">10px</property>
+                            <property name="fontWeight">bold</property>
+                            <expression name="valueExpr">var value;&#13;
+ if(params["summaryBy"].value==1)&#13;
+ {&#13;
+ value='Route';&#13;
+ }&#13;
+ else if(params["summaryBy"].value==2)&#13;
+ {&#13;
+  value='Vehicle Type ';&#13;
+ }&#13;
+  else if(params["summaryBy"].value==3)&#13;
+ {&#13;
+  value='Week';&#13;
+ }&#13;
+  else if(params["summaryBy"].value==4)&#13;
+ {&#13;
+  value='Date';&#13;
+ }&#13;
+   else if(params["summaryBy"].value==5)&#13;
+ {&#13;
+  value='Month';&#13;
+ }&#13;
+    else if(params["summaryBy"].value==6)&#13;
+ {&#13;
+  value='Bi-Week';&#13;
+ }&#13;
+ else if(params["summaryBy"].value==7)&#13;
+ {&#13;
+  value='Vehicle';&#13;
+ }&#13;
+ else if(params["summaryBy"].value==8)&#13;
+ {&#13;
+  value='Trip';&#13;
+ }&#13;
+  else if(params["summaryBy"].value==9)&#13;
+ {&#13;
+  value='Depot';&#13;
+ }&#13;
+ else if(params["summaryBy"].value==10)&#13;
+ {&#13;
+  value='Operator';&#13;
+ }&#13;
+ else if(params["summaryBy"].value==11)&#13;
+ {&#13;
+  value='Driver';&#13;
+ }&#13;
+value</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                    <cell id="9792">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="9793">
+                            <property name="fontSize">10px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">RouteName</text-property>
+                        </label>
+                    </cell>
+                    <cell id="9794">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="9795">
+                            <property name="fontSize">10px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Direction</text-property>
+                        </label>
+                    </cell>
+                    <cell id="9796">
+                        <property name="fontSize">10px</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="9797">
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">NoOfAdult</text-property>
+                        </label>
+                    </cell>
+                    <cell id="9798">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="9799">
+                            <property name="fontSize">10px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">NoOfChild</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <group id="9842">
+                <property name="groupName">groupid</property>
+                <expression name="keyExpr" type="javascript">row["groupname"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["groupname"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="9843">
+                        <property name="height">0.25in</property>
+                        <cell id="9844">
+                            <property name="colSpan">6</property>
+                            <property name="rowSpan">1</property>
+                            <property name="backgroundColor">#C0C0C0</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <data id="9857">
+                                <property name="fontSize">10px</property>
+                                <property name="resultSetColumn">groupname</property>
+                            </data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="9850">
+                        <cell id="9851">
+                            <property name="colSpan">4</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <label id="9858">
+                                <property name="fontSize">10px</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">right</property>
+                                <text-property name="text">Total</text-property>
+                            </label>
+                        </cell>
+                        <cell id="9855">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <data id="9859">
+                                <property name="fontSize">10px</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="resultSetColumn">Aggregation_1</property>
+                            </data>
+                        </cell>
+                        <cell id="9856">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <data id="9860">
+                                <property name="fontSize">10px</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="resultSetColumn">Aggregation_2</property>
+                            </data>
+                        </cell>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="9800">
+                    <property name="height">0.28125in</property>
+                    <cell id="9831">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="9840">
+                            <property name="fontSize">10px</property>
+                            <property name="resultSetColumn">Aggregation</property>
+                        </data>
+                    </cell>
+                    <cell id="9835">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="9841">
+                            <property name="fontSize">10px</property>
+                            <property name="resultSetColumn">SummaryByName</property>
+                        </data>
+                    </cell>
+                    <cell id="9807">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="9808">
+                            <property name="fontSize">10px</property>
+                            <property name="resultSetColumn">RouteName</property>
+                        </data>
+                    </cell>
+                    <cell id="9809">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="9810">
+                            <property name="fontSize">10px</property>
+                            <property name="resultSetColumn">Direction</property>
+                        </data>
+                    </cell>
+                    <cell id="9811">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="9812">
+                            <property name="fontSize">10px</property>
+                            <property name="resultSetColumn">NoOfAdult</property>
+                        </data>
+                    </cell>
+                    <cell id="9813">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="9814">
+                            <property name="fontSize">10px</property>
+                            <property name="resultSetColumn">NoOfChild</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="9815">
+                    <property name="height">0.53125in</property>
+                    <cell id="9832">
+                        <property name="colSpan">6</property>
+                        <property name="rowSpan">1</property>
+                        <property name="borderBottomColor">#FFFFFF</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#FFFFFF</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#FFFFFF</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#FFFFFF</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="9862">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <list-property name="visibility">
+                                <structure>
+                                    <property name="format">all</property>
+                                    <expression name="valueExpr" type="javascript">Total.count()>0</expression>
+                                </structure>
+                            </list-property>
+                            <text-property name="text">No Data Found For Selected Criteria</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

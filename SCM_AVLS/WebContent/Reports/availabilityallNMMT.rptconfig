@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__FromDate_1201_0</property>
+            <property name="value">2013-12-01 00:00:00</property>
+        </structure>
+        <structure>
+            <property name="name">__isnull_1202_1</property>
+            <property name="value">RegNo_1202</property>
+        </structure>
+        <structure>
+            <property name="name">RegNo_1202_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">FromDate_1201_2</property>
+            <property name="value">2013-12-01 00:00:00</property>
+        </structure>
+        <structure>
+            <property name="name">FromDate_1201_type_</property>
+            <property name="value">string</property>
+        </structure>
+    </list-property>
+</report>

@@ -1,0 +1,2342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.2.v201410272105 Build &lt;4.4.2.v20150217-1805></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="companyname" id="3240">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="companyUrl" id="3241">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="FromDate" id="817">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ToDate" id="818">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ServiceId" id="6144">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="User" id="6998">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="OperatorID" id="7171">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="DepartmentId" id="7172">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="RejectionStatus" id="12127">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+            <property name="odaURL">jdbc:sqlserver://192.168.206.16;databaseName=SMC_VTS</property>
+            <property name="odaUser">sa</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">c2FAMTIz</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.SPSelectDataSet" name="Data Set" id="10467">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints"/>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">@p_ServiceGroupId</property>
+                    <property name="paramName">ServiceId</property>
+                    <property name="nativeName">@p_ServiceGroupId</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_fromDate</property>
+                    <property name="paramName">FromDate</property>
+                    <property name="nativeName">@p_fromDate</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_toDate</property>
+                    <property name="paramName">ToDate</property>
+                    <property name="nativeName">@p_toDate</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">3</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_OperatorId</property>
+                    <property name="paramName">OperatorID</property>
+                    <property name="nativeName">@p_OperatorId</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">4</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_userId</property>
+                    <property name="paramName">User</property>
+                    <property name="nativeName">@p_userId</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">5</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_DepartmentId</property>
+                    <property name="paramName">DepartmentId</property>
+                    <property name="nativeName">@p_DepartmentId</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">6</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_RejectionStatus</property>
+                    <property name="paramName">RejectionStatus</property>
+                    <property name="nativeName">@p_RejectionStatus</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">7</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">vehiclescheduleid</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">virtualvehicleno</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">vehiclenumber</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">schedstarttime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">schedendtime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">starttime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">endtime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">TripStatus</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">MissedTripRemarks</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">SpeedViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">NotStoppedViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">RouteViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">StoppageViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">OP_RouteViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">OP_StoppageViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">OP_NotStoppedViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">OP_SpeedViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">SMC_RouteViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">SMC_StoppageViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">SMC_NotStoppedViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">SMC_SpeedViolation</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">violationtime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">RejectionRemark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">RejectionStatus</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">Descriptions</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">27</property>
+                        <property name="name">reason</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">28</property>
+                        <property name="name">operatorremarks</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">29</property>
+                        <property name="name">smcremarks</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">vehiclescheduleid</property>
+                    <property name="nativeName">vehiclescheduleid</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">virtualvehicleno</property>
+                    <property name="nativeName">virtualvehicleno</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">vehiclenumber</property>
+                    <property name="nativeName">vehiclenumber</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">schedstarttime</property>
+                    <property name="nativeName">schedstarttime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">schedendtime</property>
+                    <property name="nativeName">schedendtime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">starttime</property>
+                    <property name="nativeName">starttime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">endtime</property>
+                    <property name="nativeName">endtime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">TripStatus</property>
+                    <property name="nativeName">TripStatus</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">MissedTripRemarks</property>
+                    <property name="nativeName">MissedTripRemarks</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">SpeedViolation</property>
+                    <property name="nativeName">SpeedViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">NotStoppedViolation</property>
+                    <property name="nativeName">NotStoppedViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">RouteViolation</property>
+                    <property name="nativeName">RouteViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">StoppageViolation</property>
+                    <property name="nativeName">StoppageViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">OP_RouteViolation</property>
+                    <property name="nativeName">OP_RouteViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">OP_StoppageViolation</property>
+                    <property name="nativeName">OP_StoppageViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">OP_NotStoppedViolation</property>
+                    <property name="nativeName">OP_NotStoppedViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">OP_SpeedViolation</property>
+                    <property name="nativeName">OP_SpeedViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">SMC_RouteViolation</property>
+                    <property name="nativeName">SMC_RouteViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">SMC_StoppageViolation</property>
+                    <property name="nativeName">SMC_StoppageViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">SMC_NotStoppedViolation</property>
+                    <property name="nativeName">SMC_NotStoppedViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">SMC_SpeedViolation</property>
+                    <property name="nativeName">SMC_SpeedViolation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">Type</property>
+                    <property name="nativeName">Type</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">violationtime</property>
+                    <property name="nativeName">violationtime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">RejectionRemark</property>
+                    <property name="nativeName">RejectionRemark</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">RejectionStatus</property>
+                    <property name="nativeName">RejectionStatus</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">26</property>
+                    <property name="name">Descriptions</property>
+                    <property name="nativeName">Descriptions</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">27</property>
+                    <property name="name">reason</property>
+                    <property name="nativeName">reason</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">28</property>
+                    <property name="name">operatorremarks</property>
+                    <property name="nativeName">operatorremarks</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">29</property>
+                    <property name="name">smcremarks</property>
+                    <property name="nativeName">smcremarks</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{call spc_GetOperationReconciliationReport(?,?,?,?,?,?,?)} ]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_ServiceGroupId</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_fromDate</design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>20</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_toDate</design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>20</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_OperatorId</design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_userId</design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_DepartmentId</design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_RejectionStatus</design:name>
+            <design:position>7</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">us-letter</property>
+            <property name="orientation">auto</property>
+            <property name="height">8.5in</property>
+            <property name="width">8.5in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="4832">
+            <property name="color">black</property>
+            <property name="borderBottomColor">#909090</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">thin</property>
+            <property name="borderLeftColor">#909090</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">thin</property>
+            <property name="borderRightColor">#909090</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">thin</property>
+            <property name="borderTopColor">#909090</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">thin</property>
+            <property name="textAlign">left</property>
+            <property name="height">1.4791666666666667in</property>
+            <property name="width">7.927083333333333in</property>
+            <column id="4833">
+                <property name="width">1.1145833333333333in</property>
+            </column>
+            <column id="4834">
+                <property name="width">3.0625in</property>
+            </column>
+            <column id="4835">
+                <property name="width">1.9791666666666667in</property>
+            </column>
+            <column id="6934">
+                <property name="width">1.7708333333333333in</property>
+            </column>
+            <row id="4836">
+                <property name="height">0.3020833333333333in</property>
+                <cell id="4837">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <text-data id="4838">
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <expression name="valueExpr">params["companyname"].value</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+                <cell id="4839">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text-data id="6935">
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">right</property>
+                        <expression name="valueExpr">params["companyUrl"].value</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="4840">
+                <property name="height">1.1770833333333333in</property>
+                <cell id="4841">
+                    <property name="textAlign">center</property>
+                    <image id="6936">
+                        <property name="height">1.0526315789473684in</property>
+                        <property name="width">0.968421052631579in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">Images/SMC Logo_small.png</expression>
+                    </image>
+                </cell>
+                <cell id="4842">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text id="6204">
+                        <property name="fontSize">20px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="textAlign">center</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Operation Reconciliation]]></text-property>
+                    </text>
+                    <label id="5804"/>
+                    <text-data id="10466">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">10pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">' Reporting Period  : '+BirtDateTime.day(params["FromDate"].value)+"/"+BirtDateTime.month(params["FromDate"].value)+"/"+BirtDateTime.year(params["FromDate"].value) &#13;
++" To "+BirtDateTime.day(params["ToDate"].value)+"/"+BirtDateTime.month(params["ToDate"].value)+"/"+BirtDateTime.year(params["ToDate"].value)</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+                <cell id="6933">
+                    <label id="6937"/>
+                    <image id="6938">
+                        <property name="display">block</property>
+                        <property name="height">0.385in</property>
+                        <property name="width">1.542in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">Images/sitilink.png</expression>
+                    </image>
+                    <label id="6939"/>
+                </cell>
+            </row>
+        </grid>
+        <table id="12661">
+            <property name="width">7.916666666666667in</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">virtualvehicleno</property>
+                    <text-property name="displayName">virtualvehicleno</text-property>
+                    <expression name="expression" type="javascript">"Virtual Vehicle No:"+dataSetRow["virtualvehicleno"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">vehiclenumber</property>
+                    <text-property name="displayName">vehiclenumber</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["vehiclenumber"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">schedstarttime</property>
+                    <text-property name="displayName">schedstarttime</text-property>
+                    <expression name="expression" type="javascript">"ScheduleStart Time:"+dataSetRow["schedstarttime"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">schedendtime</property>
+                    <text-property name="displayName">schedendtime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["schedendtime"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">starttime</property>
+                    <text-property name="displayName">starttime</text-property>
+                    <expression name="expression" type="javascript">"Trip Start Time:"+dataSetRow["starttime"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">endtime</property>
+                    <text-property name="displayName">endtime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["endtime"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TripStatus</property>
+                    <text-property name="displayName">TripStatus</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TripStatus"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">MissedTripRemarks</property>
+                    <text-property name="displayName">MissedTripRemarks</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MissedTripRemarks"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">SpeedViolation</property>
+                    <text-property name="displayName">SpeedViolation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SpeedViolation"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">NotStoppedViolation</property>
+                    <text-property name="displayName">NotStoppedViolation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NotStoppedViolation"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">RouteViolation</property>
+                    <text-property name="displayName">RouteViolation</text-property>
+                    <expression name="expression" type="javascript">"Route Violation:"+dataSetRow["RouteViolation"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">StoppageViolation</property>
+                    <text-property name="displayName">StoppageViolation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["StoppageViolation"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">OP_RouteViolation</property>
+                    <text-property name="displayName">OP_RouteViolation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["OP_RouteViolation"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">OP_StoppageViolation</property>
+                    <text-property name="displayName">OP_StoppageViolation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["OP_StoppageViolation"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">OP_NotStoppedViolation</property>
+                    <text-property name="displayName">OP_NotStoppedViolation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["OP_NotStoppedViolation"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">OP_SpeedViolation</property>
+                    <text-property name="displayName">OP_SpeedViolation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["OP_SpeedViolation"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">SMC_RouteViolation</property>
+                    <text-property name="displayName">SMC_RouteViolation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SMC_RouteViolation"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">SMC_StoppageViolation</property>
+                    <text-property name="displayName">SMC_StoppageViolation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SMC_StoppageViolation"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">SMC_NotStoppedViolation</property>
+                    <text-property name="displayName">SMC_NotStoppedViolation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SMC_NotStoppedViolation"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">SMC_SpeedViolation</property>
+                    <text-property name="displayName">SMC_SpeedViolation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SMC_SpeedViolation"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Type</property>
+                    <text-property name="displayName">Type</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Type"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">violationtime</property>
+                    <text-property name="displayName">violationtime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["violationtime"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">RejectionRemark</property>
+                    <text-property name="displayName">RejectionRemark</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RejectionRemark"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">RejectionStatus</property>
+                    <text-property name="displayName">RejectionStatus</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RejectionStatus"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Descriptions</property>
+                    <text-property name="displayName">Descriptions</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Descriptions"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">reason</property>
+                    <text-property name="displayName">reason</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["reason"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">operatorremarks</property>
+                    <text-property name="displayName">operatorremarks</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["operatorremarks"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">smcremarks</property>
+                    <text-property name="displayName">smcremarks</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["smcremarks"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="12805">
+                <property name="width">1.0520833333333333in</property>
+            </column>
+            <column id="12806">
+                <property name="width">1.2083333333333333in</property>
+            </column>
+            <column id="12807">
+                <property name="width">2.53125in</property>
+            </column>
+            <column id="12808">
+                <property name="width">1.0416666666666667in</property>
+            </column>
+            <column id="13008">
+                <property name="width">2.0833333333333335in</property>
+            </column>
+            <header>
+                <row id="12662">
+                    <property name="borderBottomColor">#909090</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftColor">#909090</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightColor">#909090</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopColor">#909090</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <property name="height">0.2916666666666667in</property>
+                    <cell id="12703">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="12704">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Violation Type</text-property>
+                        </label>
+                    </cell>
+                    <cell id="12705">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="12706">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Violation Time</text-property>
+                        </label>
+                    </cell>
+                    <cell id="12707">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="13139">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Description</text-property>
+                        </label>
+                    </cell>
+                    <cell id="12709">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">1</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="12710">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Rejection Status</text-property>
+                        </label>
+                    </cell>
+                    <cell id="13137">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="12708">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Rejection Remark</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <group id="12955">
+                <property name="groupName">NewTableGroup6</property>
+                <expression name="keyExpr" type="javascript">row["schedendtime"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["schedendtime"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <list-property name="sort">
+                    <structure>
+                        <expression name="key" type="javascript">row["virtualvehicleno"]</expression>
+                        <property name="direction">asc</property>
+                        <property name="strength">-1</property>
+                    </structure>
+                    <structure>
+                        <expression name="key" type="javascript">row["vehiclenumber"]</expression>
+                        <property name="direction">asc</property>
+                        <property name="strength">-1</property>
+                    </structure>
+                </list-property>
+                <header>
+                    <row id="12956">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="height">0.2604166666666667in</property>
+                        <cell id="12957">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <data id="12966">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="resultSetColumn">virtualvehicleno</property>
+                            </data>
+                        </cell>
+                        <cell id="12959">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12967">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">"Vehicle No:"+row["vehiclenumber"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="13068">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="13069"/>
+                        <cell id="13070"/>
+                        <cell id="13071"/>
+                        <cell id="13072"/>
+                        <cell id="13073"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="12942">
+                <property name="groupName">NewTableGroup5</property>
+                <expression name="keyExpr" type="javascript">row["schedstarttime"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["schedstarttime"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="12943">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="height">0.3854166666666667in</property>
+                        <cell id="12944">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12990">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <expression name="valueExpr">"Date:"+params["FromDate"].value</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="12988">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <data id="12953">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="resultSetColumn">schedstarttime</property>
+                            </data>
+                        </cell>
+                        <cell id="12946">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12954">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">"Schedule End Time:"+row["schedendtime"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="12989">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <data id="12903">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="resultSetColumn">starttime</property>
+                            </data>
+                        </cell>
+                        <cell id="13001">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12904">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">"Trip End Time:"+row["endtime"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="13074">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="13075"/>
+                        <cell id="13076"/>
+                        <cell id="13077"/>
+                        <cell id="13078"/>
+                        <cell id="13079"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="12892">
+                <property name="groupName">NewTableGroup4</property>
+                <expression name="keyExpr" type="javascript">row["schedstarttime"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["schedstarttime"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="12893">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="height">0.2604166666666667in</property>
+                        <cell id="12894">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <label id="13009">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <text-property name="text">Trip Status:</text-property>
+                            </label>
+                        </cell>
+                        <cell id="12895">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12906">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">row["TripStatus"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="12896">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <label id="13010">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <text-property name="text">Cancellation Reason:</text-property>
+                            </label>
+                        </cell>
+                        <cell id="12897">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="13136">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <expression name="valueExpr">row["reason"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="13080">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="13081"/>
+                        <cell id="13082"/>
+                        <cell id="13083"/>
+                        <cell id="13084"/>
+                        <cell id="13085"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="12855">
+                <property name="groupName">NewTableGroup3</property>
+                <expression name="keyExpr" type="javascript">row["schedstarttime"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["schedstarttime"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="13051">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="height">0.23958333333333334in</property>
+                        <cell id="13052">
+                            <property name="colSpan">5</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <label id="13057">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">center</property>
+                                <text-property name="text">System Generated</text-property>
+                            </label>
+                        </cell>
+                    </row>
+                    <row id="12856">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="height">0.23958333333333334in</property>
+                        <cell id="12857">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <data id="12866">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="resultSetColumn">RouteViolation</property>
+                            </data>
+                        </cell>
+                        <cell id="12858">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12867">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">"Stoppage Violation:"+row["StoppageViolation"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="12859">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12868">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">" Non Stop Violation:"+row["NotStoppedViolation"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="12860">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12869">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">" Speed Violation:"+row["SpeedViolation"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="13086">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="13087"/>
+                        <cell id="13088"/>
+                        <cell id="13089"/>
+                        <cell id="13090"/>
+                        <cell id="13091"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="12825">
+                <property name="groupName">NewTableGroup2</property>
+                <expression name="keyExpr" type="javascript">row["schedstarttime"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["schedstarttime"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="13039">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="height">0.23958333333333334in</property>
+                        <cell id="13040">
+                            <property name="colSpan">5</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <label id="12980">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">center</property>
+                                <text-property name="text">Operator Approved</text-property>
+                            </label>
+                        </cell>
+                    </row>
+                    <row id="12826">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="height">0.21875in</property>
+                        <cell id="12827">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12970">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">" Route Violation:"+row["OP_RouteViolation"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="12828">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12841">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">" Stoppage Violation:"+row["OP_StoppageViolation"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="12829">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12842">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">" Non Stop Violation:"+row["OP_NotStoppedViolation"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="12830">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12843">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">" Speed Violation:"+row["OP_SpeedViolation"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="13092">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="13093"/>
+                        <cell id="13094"/>
+                        <cell id="13095"/>
+                        <cell id="13096"/>
+                        <cell id="13097"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="12809">
+                <property name="groupName">NewTableGroup1</property>
+                <expression name="keyExpr" type="javascript">row["schedstarttime"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["schedstarttime"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="13045">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="height">0.25in</property>
+                        <cell id="13046">
+                            <property name="colSpan">5</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <label id="12984">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">center</property>
+                                <text-property name="text">SMC Approved </text-property>
+                            </label>
+                        </cell>
+                    </row>
+                    <row id="12810">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="height">0.20833333333333334in</property>
+                        <cell id="12811">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12971">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">"Route Violation:"+row["SMC_RouteViolation"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="12837">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12838">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">"Stoppage Violation:"+row["SMC_StoppageViolation"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="12822">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12824">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">" Non Stop Violation:"+row["SMC_NotStoppedViolation"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="12839">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="12840">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">normal</property>
+                                <expression name="valueExpr">"Speed Violation:"+row["SMC_SpeedViolation"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="13098">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="13099"/>
+                        <cell id="13100"/>
+                        <cell id="13101"/>
+                        <cell id="13102"/>
+                        <cell id="13103"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="13104">
+                <property name="groupName">NewTableGroup7</property>
+                <expression name="keyExpr" type="javascript">row["schedstarttime"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["schedstarttime"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="13105">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="height">0.23958333333333334in</property>
+                        <cell id="13106">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <label id="13132">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <text-property name="text">Operator Remarks</text-property>
+                            </label>
+                        </cell>
+                        <cell id="13107">
+                            <property name="colSpan">4</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="13134">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <expression name="valueExpr">row["operatorremarks"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="13111">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="13112"/>
+                        <cell id="13113"/>
+                        <cell id="13114"/>
+                        <cell id="13115"/>
+                        <cell id="13116"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="13118">
+                <property name="groupName">NewTableGroup8</property>
+                <expression name="keyExpr" type="javascript">row["schedstarttime"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["schedstarttime"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="13119">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="height">0.2604166666666667in</property>
+                        <cell id="13120">
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <label id="13133">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <text-property name="text">SMC Remarks</text-property>
+                            </label>
+                        </cell>
+                        <cell id="13121">
+                            <property name="colSpan">4</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomColor">#909090</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftColor">#909090</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightColor">#909090</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopColor">#909090</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <text-data id="13135">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">8pt</property>
+                                <expression name="valueExpr">row["smcremarks"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="13125">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="13126"/>
+                        <cell id="13127"/>
+                        <cell id="13128"/>
+                        <cell id="13129"/>
+                        <cell id="13130"/>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="12711">
+                    <property name="borderBottomColor">#909090</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftColor">#909090</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightColor">#909090</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopColor">#909090</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <property name="height">0.4166666666666667in</property>
+                    <cell id="12752">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="12753">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">10px</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">Type</property>
+                        </data>
+                    </cell>
+                    <cell id="12754">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="12755">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">10px</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">violationtime</property>
+                        </data>
+                    </cell>
+                    <cell id="12756">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="13140">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">10px</property>
+                            <property name="resultSetColumn">Descriptions</property>
+                        </data>
+                    </cell>
+                    <cell id="12758">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">1</property>
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="12759">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">10px</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">RejectionStatus</property>
+                        </data>
+                    </cell>
+                    <cell id="13138">
+                        <property name="borderBottomColor">#909090</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#909090</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#909090</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#909090</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="12757">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">10px</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">RejectionRemark</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="12760">
+                    <property name="borderBottomColor">#909090</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftColor">#909090</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightColor">#909090</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopColor">#909090</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <property name="height">0.28125in</property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">Total.Count()>=1</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="12781">
+                        <property name="colSpan">5</property>
+                        <property name="rowSpan">1</property>
+                        <label id="12968">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">No Data Found For Selected Criteria</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

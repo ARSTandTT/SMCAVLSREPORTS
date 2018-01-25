@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.2.v201410272105 Build &lt;4.4.2.v20150217-1805></property>
+    <property name="units">in</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="FromDate" id="1201">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript">params["Date"].value</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="RegNo" id="1202">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript">params["RegNum"].value</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="companyname" id="3241">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="companyUrl" id="3242">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="1180">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+            <property name="odaURL">jdbc:sqlserver://192.168.206.7;databaseName=NMMT_Live</property>
+            <property name="odaUser">travelstaruser</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">dHJhdmVsc3RhcnVzZXJwd2Q=</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.SPSelectDataSet" name="Data Set" id="1181">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">@p_StartTime</property>
+                    <property name="paramName">FromDate</property>
+                    <property name="nativeName">@p_StartTime</property>
+                    <property name="dataType">dateTime</property>
+                    <property name="nativeDataType">93</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">params["Date"].value</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">@p_RegNo</property>
+                    <property name="paramName">RegNo</property>
+                    <property name="nativeName">@p_RegNo</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">-9</property>
+                    <property name="position">2</property>
+                    <expression name="defaultValue" type="javascript">params["RegNum"].value</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">UNNAMED_1</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">VehicleId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">regno</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">obuid</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">GpsTime</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">TripId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Location</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">StartTime</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">endtime</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">StartLocation</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">EndLocation</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">TransporterName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">UNNAMED_1</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">VehicleId</property>
+                    <property name="nativeName">VehicleId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">regno</property>
+                    <property name="nativeName">regno</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">obuid</property>
+                    <property name="nativeName">obuid</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">GpsTime</property>
+                    <property name="nativeName">GpsTime</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">TripId</property>
+                    <property name="nativeName">TripId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Location</property>
+                    <property name="nativeName">Location</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">StartTime</property>
+                    <property name="nativeName">StartTime</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">endtime</property>
+                    <property name="nativeName">endtime</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">StartLocation</property>
+                    <property name="nativeName">StartLocation</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">EndLocation</property>
+                    <property name="nativeName">EndLocation</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">TransporterName</property>
+                    <property name="nativeName">TransporterName</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{call dbo.spc_GetHourlyUpdate(?,?)} ]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_StartTime</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+          <design:precision>23</design:precision>
+          <design:scale>3</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@p_RegNo</design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-9</design:nativeDataTypeCode>
+          <design:precision>100</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="newDate" id="1210">
+            <structure name="dateTimeFormat">
+                <property name="category">Custom</property>
+                <property name="pattern">dd/MM/yy</property>
+                <property name="locale">en_IN</property>
+            </structure>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="rightMargin">0.14583333333333334in</property>
+            <property name="showHeaderOnFirst">false</property>
+            <page-header>
+                <text id="1237">
+                    <property name="fontFamily">"Arial"</property>
+                    <property name="fontSize">24px</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="textAlign">center</property>
+                    <property name="contentType">auto</property>
+                    <text-property name="content"><![CDATA[AVAILABILITY REPORT (ALL VEHICLES)]]></text-property>
+                </text>
+            </page-header>
+            <page-footer>
+                <grid id="738">
+                    <property name="width">7.84375in</property>
+                    <column id="739">
+                        <property name="width">0.8541666666666666in</property>
+                    </column>
+                    <column id="740">
+                        <property name="width">3.4270833333333335in</property>
+                    </column>
+                    <column id="741">
+                        <property name="width">3.5625in</property>
+                    </column>
+                    <row id="742">
+                        <cell id="743">
+                            <image id="1238">
+                                <property name="height">0.20833333333333334in</property>
+                                <property name="width">0.6354166666666666in</property>
+                                <property name="source">file</property>
+                                <expression name="uri" type="constant">Images\arslogo.jpg</expression>
+                            </image>
+                        </cell>
+                        <cell id="744">
+                            <text id="752">
+                                <property name="style">newDate</property>
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[Generated Time:<value-of>
+importPackage( Packages.java.text );
+var format= new SimpleDateFormat("dd/MM/yyyy hh:mm:ss a", reportContext.getLocale());
+var outDate = format.format(new Date());
+outDate</value-of>]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="745">
+                            <grid id="1231">
+                                <property name="width">3.5in</property>
+                                <column id="1232">
+                                    <property name="width">1.5625in</property>
+                                </column>
+                                <column id="1233">
+                                    <property name="width">1.9375in</property>
+                                </column>
+                                <row id="1234">
+                                    <cell id="1235"/>
+                                    <cell id="1236">
+                                        <grid id="783">
+                                            <property name="height">0.3333333333333333in</property>
+                                            <property name="width">2.2916666666666665in</property>
+                                            <column id="796">
+                                                <property name="width">0.65625in</property>
+                                            </column>
+                                            <column id="784">
+                                                <property name="width">0.5520833333333334in</property>
+                                            </column>
+                                            <column id="785">
+                                                <property name="width">0.22916666666666666in</property>
+                                            </column>
+                                            <column id="786">
+                                                <property name="width">0.8541666666666666in</property>
+                                            </column>
+                                            <row id="787">
+                                                <property name="height">0.3333333333333333in</property>
+                                                <cell id="795">
+                                                    <label id="797">
+                                                        <property name="textAlign">right</property>
+                                                        <text-property name="text">Page </text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="788">
+                                                    <auto-text id="789">
+                                                        <property name="textAlign">right</property>
+                                                        <property name="type">page-number</property>
+                                                    </auto-text>
+                                                </cell>
+                                                <cell id="790">
+                                                    <text id="791">
+                                                        <property name="textAlign">center</property>
+                                                        <property name="contentType">plain</property>
+                                                        <text-property name="content"><![CDATA[/]]></text-property>
+                                                    </text>
+                                                </cell>
+                                                <cell id="792">
+                                                    <auto-text id="793">
+                                                        <property name="textAlign">left</property>
+                                                        <property name="type">total-page</property>
+                                                    </auto-text>
+                                                </cell>
+                                            </row>
+                                        </grid>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="472">
+            <property name="fontFamily">"Arial"</property>
+            <property name="borderBottomColor">#000000</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">thin</property>
+            <property name="borderLeftColor">#000000</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">thin</property>
+            <property name="borderRightColor">#000000</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">thin</property>
+            <property name="borderTopColor">#000000</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">thin</property>
+            <property name="height">1.4375in</property>
+            <property name="width">7.833333333333333in</property>
+            <column id="473">
+                <property name="width">1.1354166666666667in</property>
+            </column>
+            <column id="474">
+                <property name="width">2.5416666666666665in</property>
+            </column>
+            <column id="712">
+                <property name="width">2.5833333333333335in</property>
+            </column>
+            <column id="3251">
+                <property name="width">1.5729166666666667in</property>
+            </column>
+            <row id="713">
+                <property name="height">0.3020833333333333in</property>
+                <cell id="714">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <text-data id="3244">
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <expression name="valueExpr">params["companyname"].value</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+                <cell id="710">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text-data id="3245">
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">right</property>
+                        <expression name="valueExpr">params["companyUrl"].value</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="719">
+                <property name="height">1.1354166666666667in</property>
+                <cell id="735">
+                    <property name="textAlign">center</property>
+                    <image id="3243">
+                        <property name="height">1.0526315789473684in</property>
+                        <property name="width">0.968421052631579in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">Images/SMC Logo_small.png</expression>
+                    </image>
+                </cell>
+                <cell id="720">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text-data id="794">
+                        <property name="fontSize">24px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">"AVAILABILITY REPORT (ALL VEHICLES)"</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                    <text-data id="753">
+                        <property name="fontSize">14px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">var givenDate = params["FromDate"].value;&#13;
+importPackage( Packages.java.text );&#13;
+var format= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", reportContext.getLocale());&#13;
+var formattedDate = format.parse( givenDate );&#13;
+var format1= new SimpleDateFormat("dd/MM/yyyy", reportContext.getLocale());&#13;
+var fromDate = format1.format( formattedDate );&#13;
+'Reporting Date : ' +fromDate</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+                <cell id="3250">
+                    <label id="3252"/>
+                    <label id="3254"/>
+                    <image id="3253">
+                        <property name="height">0.385in</property>
+                        <property name="width">1.542in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">Images/sitilink.png</expression>
+                    </image>
+                </cell>
+            </row>
+        </grid>
+        <label id="798"/>
+        <table id="799">
+            <property name="width">7.84375in</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">UNNAMED_1</property>
+                    <text-property name="displayName">UNNAMED_1</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["UNNAMED_1"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">VehicleId</property>
+                    <text-property name="displayName">VehicleId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["VehicleId"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">regno</property>
+                    <text-property name="displayName">regno</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["regno"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">obuid</property>
+                    <text-property name="displayName">obuid</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["obuid"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">GpsTime</property>
+                    <text-property name="displayName">GpsTime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["GpsTime"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">TripId</property>
+                    <text-property name="displayName">TripId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TripId"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Location</property>
+                    <text-property name="displayName">Location</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Location"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">StartTime</property>
+                    <text-property name="displayName">StartTime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["StartTime"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">endtime</property>
+                    <text-property name="displayName">endtime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["endtime"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">StartLocation</property>
+                    <text-property name="displayName">StartLocation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["StartLocation"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">EndLocation</property>
+                    <text-property name="displayName">EndLocation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EndLocation"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TransporterName</property>
+                    <text-property name="displayName">TransporterName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TransporterName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <text-property name="displayName">GPS TIME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["GpsTime"]</expression>
+                    <property name="dataType">time</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_1</property>
+                    <text-property name="displayName">Start Location</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["StartLocation"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_2</property>
+                    <text-property name="displayName">End Location</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EndLocation"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_3</property>
+                    <text-property name="displayName">Current Location</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Location"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_4</property>
+                    <text-property name="displayName">Reg No:</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["regno"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="812">
+                <property name="width">2.0208333333333335in</property>
+            </column>
+            <column id="813">
+                <property name="width">2.0104166666666665in</property>
+            </column>
+            <column id="1187">
+                <property name="width">2.0104166666666665in</property>
+            </column>
+            <column id="1193">
+                <property name="width">1.8020833333333333in</property>
+            </column>
+            <header>
+                <row id="800">
+                    <property name="height">0.3541666666666667in</property>
+                    <cell id="801">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text id="815">
+                            <property name="fontSize">10px</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[DATE / TIME]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="802">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text id="816">
+                            <property name="fontSize">10px</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[START LOCATION]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="1182">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text id="1194">
+                            <property name="fontSize">10px</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[END LOCATION]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="1188">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text id="1195">
+                            <property name="fontSize">10px</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[CURRENT LOCATION]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </header>
+            <group id="1173">
+                <property name="groupName">Registration number</property>
+                <expression name="keyExpr" type="javascript">row["regno"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["regno"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="1174">
+                        <cell id="1175">
+                            <property name="colSpan">4</property>
+                            <property name="rowSpan">1</property>
+                            <data id="1200">
+                                <property name="backgroundColor">#C0C0C0</property>
+                                <property name="fontSize">10px</property>
+                                <property name="resultSetColumn">Column Binding_4</property>
+                            </data>
+                        </cell>
+                    </row>
+                </header>
+            </group>
+            <detail>
+                <row id="804">
+                    <cell id="805">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text-data id="1203">
+                            <property name="fontSize">10px</property>
+                            <property name="textAlign">center</property>
+                            <expression name="valueExpr">var givenDate =row["GpsTime"];&#13;
+importPackage( Packages.java.text );&#13;
+var format= new SimpleDateFormat("dd/MM/yyyy hh:mm:ss a", reportContext.getLocale());&#13;
+var outDate = format.format(givenDate);&#13;
+outDate</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                    <cell id="806">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text-data id="1204">
+                            <property name="fontSize">10px</property>
+                            <property name="textAlign">left</property>
+                            <expression name="valueExpr">row["StartLocation"]</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                    <cell id="1184">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text-data id="1205">
+                            <property name="fontSize">10px</property>
+                            <property name="textAlign">left</property>
+                            <expression name="valueExpr">row["EndLocation"]</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                    <cell id="1190">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text-data id="1206">
+                            <property name="fontSize">10px</property>
+                            <property name="textAlign">right</property>
+                            <expression name="valueExpr">row["Location"]</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="808">
+                    <cell id="809">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                    </cell>
+                    <cell id="810">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                    </cell>
+                    <cell id="1186">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                    </cell>
+                    <cell id="1192">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>
